@@ -26,7 +26,7 @@ our constitutive model. The schematic structure of the model is presented in the
 Note: Functions "lstm_forward" are used to incorporate the pretrained Deep-Learning model. Use the options "set Switch to ML = Off" and "set At which timestep switch to ML ? = 2147483646" in the parameter file to exclude the Deep-Learning model and continue with the constitutive model.
 
 ## Run the code
-Compile it using the following commands
+Compile it using the following commands and run in release mode
 ```
 cmake -DDEAL_II_DIR=/path/to/deal.II .
 make release
