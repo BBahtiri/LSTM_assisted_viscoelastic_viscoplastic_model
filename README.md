@@ -222,3 +222,5 @@ end
 These results were produced with the material parameters as presented in the parameters file and fine mesh for 0% and 10% Boehmite nanoparticles at saturated and dry state.
 ![This is an image](/fem4.png)
 
+The results above are produced using a Deep-Learning model with two layers of 150 LSTM units.
+![This is an image](/fem4.png)
