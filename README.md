@@ -1,4 +1,4 @@
-# viscoelastic_viscoplastic_model
+# Viscoelastic-Viscoplastic damage model
 
 3d viscoelastic viscoplastic model depending on moisture content and nanoparticle volume fraction
 
