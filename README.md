@@ -36,6 +36,7 @@ you can run it by typing
 ```
 ./vevp_ml_model
 ```
+Note: Create an "output" folder in the running directory before running.
 
 The parameter file is already in the current directory, and has the following options:
 ```
