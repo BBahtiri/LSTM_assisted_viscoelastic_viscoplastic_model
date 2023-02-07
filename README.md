@@ -215,3 +215,9 @@ subsection Output parameters
 end
 
 ```
+
+## Results
+
+These results were produced with the material parameters as presented in the parameters file and fine mesh
+![This is an image](/rheo.PNG)
+
