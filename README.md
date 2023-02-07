@@ -19,7 +19,7 @@ composed of an elastic spring and a viscous dashpot capturing the rate- and
 temperature dependent behavior of the material at hand. Additionally, the
 quasi-irreversible sliding of the molecular chains results in stress softening
 in the material known as the Mullins effect, which is implemented within
-our constitutive model.
+our constitutive model. The schematic structure of the model is presented in the picture below.
 
 ![This is an image](/rheo.PNG)
 
