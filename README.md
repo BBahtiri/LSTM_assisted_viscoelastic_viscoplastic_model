@@ -20,3 +20,8 @@ temperature dependent behavior of the material at hand. Additionally, the
 quasi-irreversible sliding of the molecular chains results in stress softening
 in the material known as the Mullins effect, which is implemented within
 our constitutive model.
+
+Compile it using the following commands
+```
+cmake -DDEAL_II_DIR=/path/to/deal.II .
+```
