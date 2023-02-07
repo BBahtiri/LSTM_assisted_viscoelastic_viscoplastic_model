@@ -218,6 +218,6 @@ end
 
 ## Results
 
-These results were produced with the material parameters as presented in the parameters file and fine mesh
+These results were produced with the material parameters as presented in the parameters file and fine mesh for 0% and 10% Boehmite nanoparticles at saturated and dry state.
 ![This is an image](/fem4.png)
 
