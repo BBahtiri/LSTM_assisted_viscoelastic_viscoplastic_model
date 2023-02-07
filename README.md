@@ -23,7 +23,7 @@ our constitutive model. The schematic structure of the model is presented in the
 
 ![This is an image](/rheo.PNG)
 
-Note: Functions "lstm_forward" are used to incorporate the pretrained Deep-Learning model. Use the options "set Switch to ML = Off" and "set At which timestep switch to ML ? = 2147483646" in the paramter file to exclude the Deep-Learning model and continue with the constitutive model.
+Note: Functions "lstm_forward" are used to incorporate the pretrained Deep-Learning model. Use the options "set Switch to ML = Off" and "set At which timestep switch to ML ? = 2147483646" in the parameter file to exclude the Deep-Learning model and continue with the constitutive model.
 
 Compile it using the following commands
 ```
