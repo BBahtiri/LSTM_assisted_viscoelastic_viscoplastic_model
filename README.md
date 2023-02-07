@@ -24,4 +24,10 @@ our constitutive model.
 Compile it using the following commands
 ```
 cmake -DDEAL_II_DIR=/path/to/deal.II .
+make release
+make
+```
+you can run it by typing
+```
+./vevp_ml_model
 ```
