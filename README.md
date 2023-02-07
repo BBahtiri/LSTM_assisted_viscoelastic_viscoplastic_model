@@ -223,4 +223,4 @@ These results were produced with the material parameters as presented in the par
 ![This is an image](/fem4.png)
 
 The results above are produced using a Deep-Learning model with two layers of 150 LSTM units.
-![This is an image](/fem4.png)
+![This is an image](/ML_results.png)
