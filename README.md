@@ -21,6 +21,8 @@ quasi-irreversible sliding of the molecular chains results in stress softening
 in the material known as the Mullins effect, which is implemented within
 our constitutive model.
 
+Note: Functions "lstm_forward" are used to incorporate the pretrained Deep-Learning model. Use the options "set Switch to ML = Off" and "set At which timestep switch to ML ? = 2147483646" in the paramter file to exclude the Deep-Learning model and continue with the constitutive model.
+
 Compile it using the following commands
 ```
 cmake -DDEAL_II_DIR=/path/to/deal.II .
