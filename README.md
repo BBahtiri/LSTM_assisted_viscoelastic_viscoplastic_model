@@ -1,10 +1,10 @@
 # Viscoelastic-Viscoplastic damage model
 
-In this work we take a classical approach to solving the equations governing quasi-static finite-strain compressible elasticity, with code based on ```step-44``` and the code ```Quasi_static_Finite_strain_Compressible_Elasticity``` from the code gallery. The formulation adopted here is an updated lagrangian formulation.
+In this work we take a classical approach to solving the equations governing quasi-static finite-strain compressible elasticity, with code based on ```step-44``` and the code ```Quasi_static_Finite_strain_Compressible_Elasticity``` from the code gallery. The formulation adopted here is an updated lagrangian formulation and run the model for cyclic loading-unloading conditions at 0 and 10% nanoparticle weight fraction and dry/saturated state.
 
 The stress response of a nanoparticle/ epoxy system is decomposed into an equilibrium part and two viscous parts to capture 
 the nonlinear and rate-depended behavior of the material. We introduce the nanoparticle dependency through an amplification factor, 
-which is a function of fillers’ volume fraction.
+which is a function of fillers’ weight fraction.
 
 Our model incorporates experimental characteristics by using a decomposition
 of the material behavior into a viscoelastic and a viscoplastic part,
