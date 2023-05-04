@@ -3443,8 +3443,6 @@ namespace vevpd_model
               else
                 Assert(k_group <= u_dof, ExcInternalError());
             }
-          std::cout<<std::setprecision(16)<<"\nF "<<F<<std::endl;
-          std::cout<<std::setprecision(16)<<"\nsigma "<<sigma<<std::endl;
           //const SymmetricTensor<2,dim,NumberType> tau = lqph[q_point]->get_tau(det_F,b_bar);
           //const SymmetricTensor<2,dim,NumberType> sigma = lqph[q_point]->get_cauchy_base(Fbar,det_F,bstar);
           //const SymmetricTensor<2,dim,NumberType> sigma = lqph[q_point]->get_cauchy_baseML();
