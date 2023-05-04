@@ -183,7 +183,7 @@ namespace vevpd_model
                           Patterns::Double(0.0),
                           "Positive stretch applied length-ways to the model");
   
-        prm.declare_entry("Load type", "cyclic",
+        prm.declare_entry("Load type", "cyclic_to_zero",
                           Patterns::Selection("none|cyclic_to_zero"),
                           "Type of loading");                                                  
 
