@@ -1915,28 +1915,6 @@ namespace vevpd_model
     int file_columns[12] = {1,1,1,1,7,intHiSi,intHiSi,intHiSi,1,1,intHiSi,1};
     int file_rows[12] = {7,6,7,6,intHiSi*4,intHiSi*4,intHiSi*4,intHiSi*4,intHiSi*4,intHiSi*4,6,6};
     int files = 12;
-/*    VectorXd muX = VectorXd(7);
-    VectorXd muT = VectorXd(6);
-    VectorXd sigmaX = VectorXd(7);
-    VectorXd sigmaT = VectorXd(6);
-    MatrixXd iweights_lstm1 = MatrixXd(intHiSi*4,7);
-    MatrixXd iweights_lstm2 = MatrixXd(intHiSi*4,intHiSi);
-    MatrixXd rweights_lstm1 = MatrixXd(intHiSi*4,intHiSi);
-    MatrixXd rweights_lstm2 = MatrixXd(intHiSi*4,intHiSi);
-    VectorXd bias_lstm1 = VectorXd(intHiSi*4);
-    VectorXd bias_lstm2 = VectorXd(intHiSi*4);
-    MatrixXd weights_cl = MatrixXd(6,intHiSi);
-    VectorXd bias_cl = VectorXd(6);
-    VectorXd cstate1 = VectorXd(intHiSi);
-    VectorXd cstate2 = VectorXd(intHiSi);
-    VectorXd hstate1 = VectorXd(intHiSi);
-    VectorXd hstate2 = VectorXd(intHiSi);   
-    VectorXd cstate1_converged = VectorXd(intHiSi);
-    VectorXd cstate2_converged = VectorXd(intHiSi);
-    VectorXd hstate1_converged = VectorXd(intHiSi);
-    VectorXd hstate2_converged = VectorXd(intHiSi);    
-    VectorXd Cpert = VectorXd(intHiSi);
-    VectorXd Ypert = VectorXd(intHiSi);*/
     Eigen::Matrix<double,7,1> muX;
     Eigen::Matrix<double,6,1> muT;
     Eigen::Matrix<double,7,1> sigmaX;
@@ -2118,6 +2096,7 @@ namespace vevpd_model
         if(parameters.switchML == "On" )
           material->lstm_forward(F,bstar,1);
         
+	      
         material->update_internal_equilibrium(Fbar,det_F,bstar,1);
       }
       else if (time.get_timestep() >= parameters.intToML)
@@ -2125,6 +2104,7 @@ namespace vevpd_model
         material->lstm_forward(F,b,1);
       }
       material->update_end_iteration();
+	    
     }
     // We offer an interface to retrieve certain data.
     // This is the strain energy:
