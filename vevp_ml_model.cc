@@ -1275,11 +1275,7 @@ namespace vevpd_model
         this->eps0_converged = this->eps0;
         this->strain_converged = this->strain;
         this->d = this->d_converged;
-        this->lc_max_converged = this->lc_max;
-        this->cstate1_converged = this->cstate1;
-        this->hstate1_converged = this->hstate1;
-        this->cstate2_converged = this->cstate2;
-        this->hstate2_converged = this->hstate2;        
+        this->lc_max_converged = this->lc_max;        
     }    
 
     NumberType
