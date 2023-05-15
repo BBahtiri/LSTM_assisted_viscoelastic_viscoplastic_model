@@ -82,11 +82,10 @@ namespace vevpd_model
 // ParameterHandler object to read in the choices at run-time.
   namespace Parameters
   {
-// @sect4{Assembly method}
 
 // Here we specify whether automatic differentiation is to be used to assemble
 // the linear system, and if so then what order of differentiation is to be
-// employed.
+// employed. This is not used in the finite element analysis.
     struct AssemblyMethod
     {
       unsigned int automatic_differentiation_order;
@@ -271,11 +270,6 @@ namespace vevpd_model
       prm.leave_subsection();
     }
 
-
-// @sect4{Materials}
-
-// We also need the shear modulus $ \mu $ and Poisson ration $ \nu $ for the
-// neo-Hookean material.
     struct Materials
     {
       double mu1;
@@ -434,8 +428,6 @@ namespace vevpd_model
       prm.leave_subsection();
     }
 
-// @sect4{Linear solver}
-
 // Next, we choose both solver and preconditioner settings.  The use of an
 // effective preconditioner is critical to ensure convergence when a large
 // nonlinear motion occurs within a Newton increment.
@@ -494,8 +486,6 @@ namespace vevpd_model
       prm.leave_subsection();
     }
 
-// @sect4{Nonlinear solver}
-
 // A Newton-Raphson scheme is used to solve the nonlinear system of governing
 // equations.  We now define the tolerances and the maximum number of
 // iterations for the Newton-Raphson nonlinear solver.
@@ -541,8 +531,6 @@ namespace vevpd_model
       }
       prm.leave_subsection();
     }
-
-// @sect4{Time}
 
 // Set the timestep size $ \varDelta t $ and the simulation end-time.
     struct Time
@@ -656,9 +644,6 @@ namespace vevpd_model
       prm.leave_subsection();
     }
     
-
-// @sect4{All parameters}
-
 // Finally we consolidate all of the above structures into a single container
 // that holds all of our run-time selections.
     struct AllParameters :
@@ -712,9 +697,6 @@ namespace vevpd_model
       OutputParam::parse_parameters(prm);
     }
   }
-
-
-// @sect3{Time class}
 
 // A simple class to store time data. Its functioning is transparent so no
 // discussion is necessary. For simplicity we assume a constant time step
@@ -1468,8 +1450,6 @@ namespace vevpd_model
       const NumberType mu_mod = X*mu1;
       const NumberType kappa_mod = X*kappa;
       const NumberType J = det_F;
-      //const NumberType Jt = 1 + alphaT*(Temper-Tref);
-      //const NumberType Jz = 1 + this->alphaZ*this->zita;
       const NumberType Jt = 1.0;
       const NumberType Jz = 1.0;
       const NumberType Jm = J/(Jt*Jz);
@@ -1681,9 +1661,6 @@ namespace vevpd_model
                     this->lstm_forward(Fp,bp,0);
                     sigma_cauchy_p = this->get_cauchy_baseMLPert()*Jp;
                   }
-                  //this->update_internal_equilibrium(Fp_bar,Jp,bp,0);
-                  //this->lstm_forward(Fp,Jp,bp,0);
-                  //SymmetricTensor<2,dim,NumberType> sigma_cauchy_p = this->get_cauchy_baseMLPert(this->Ypert)*Jp;
 
                   for(int x = 0; x < dim; x++){
                     for(int y = 0; y < dim; y++){
@@ -2072,7 +2049,7 @@ namespace vevpd_model
     // The first function is used to create a material object and to
     // initialize all tensors correctly: The second one updates the stored
     // values and stresses based on the current deformation measure
-    // $\textrm{Grad}\mathbf{u}_{\textrm{n}}$.
+    // $\textrm{Grad}\mathbf{u}_{\textrm{n}}$. Here, also the ML parameters are stored.
     void setup_lqp (const Parameters::AllParameters &parameters,
                             const Time              &time)
     {
@@ -2103,6 +2080,7 @@ namespace vevpd_model
       {
         material->lstm_forward(F,b,1);
       }
+	    
       material->update_end_iteration();
 	    
     }
@@ -2250,9 +2228,6 @@ namespace vevpd_model
   private:
     std::shared_ptr< Material_Compressible_Network<dim,NumberType> > material;
   };
-
-
-// @sect3{Quasi-static compressible finite-strain solid}
 
   // Forward declarations for classes that will
   // perform assembly of the linear system.
