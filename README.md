@@ -63,7 +63,7 @@ subsection Finite element system
   set Switch to ML = Off
 
   # Hidden Size of LSTM
-  set LSTM = 150
+  set LSTM = 200
 
   # Alpha for perturbation
   set alpha = 1e-4
