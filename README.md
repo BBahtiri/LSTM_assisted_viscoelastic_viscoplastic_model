@@ -6,6 +6,8 @@ The stress response of a nanoparticle/ epoxy system is decomposed into an equili
 the nonlinear and rate-depended behavior of the material. We introduce the nanoparticle dependency through an amplification factor, 
 which is a function of fillers’ weight fraction.
 
+Reference: Bahtiri et al. "A machine learning-based viscoelastic–viscoplastic model for epoxy nanocomposites with moisture content"; DOI: https://doi.org/10.1016/j.cma.2023.116293
+
 
 ![This is an image](/rheo.PNG)
 
