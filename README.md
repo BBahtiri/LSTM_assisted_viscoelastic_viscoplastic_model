@@ -204,3 +204,21 @@ subsection Output parameters
 end
 
 ```
+
+# References
+
+For more informations, refer to our paper:
+
+[Paper](https://doi.org/10.1016/j.cma.2023.116293)
+
+```
+article{bahtiri2023machine,
+  title={A machine learning-based viscoelastic--viscoplastic model for epoxy nanocomposites with moisture content},
+  author={Bahtiri, Betim and Arash, Behrouz and Scheffler, Sven and Jux, Maximilian and Rolfes, Raimund},
+  journal={Computer Methods in Applied Mechanics and Engineering},
+  volume={415},
+  pages={116293},
+  year={2023},
+  publisher={Elsevier}
+}
+```
